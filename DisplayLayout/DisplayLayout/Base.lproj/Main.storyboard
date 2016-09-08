@@ -89,7 +89,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="166"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="001.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="JFu-Le-VWu">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="JFu-Le-VWu">
                                             <rect key="frame" x="11" y="8" width="40" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="0sg-sI-1XK"/>
@@ -171,6 +171,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="001.jpg" width="391" height="220"/>
+        <image name="1.jpg" width="351" height="220"/>
     </resources>
 </document>
