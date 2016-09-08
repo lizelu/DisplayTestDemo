@@ -114,7 +114,7 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="中文测试，中文测试中文测试中文测试中文测试中文测试中文测试中文测试中文测试中文测试中文测试中文测试" translatesAutoresizingMaskIntoConstraints="NO" id="UTE-Pm-i1p">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="test" translatesAutoresizingMaskIntoConstraints="NO" id="UTE-Pm-i1p">
                                             <rect key="frame" x="20" y="52" width="566" height="97"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
