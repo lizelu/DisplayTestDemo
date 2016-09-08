@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+     self.tableView.estimatedRowHeight = 100.0;
     [self addTestData];
 }
 
@@ -29,8 +30,11 @@
 }
 
 #pragma mark - UITableViewDelegate
+- (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+    return NO;
+}
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 100;
+    return UITableViewAutomaticDimension;       //自动调整约束，性能非常低，灰常的卡
 }
 
 #pragma mark - Table view data source
@@ -47,27 +51,37 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AutolayoutTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AutolayoutTableViewCell" forIndexPath:indexPath];
     [cell configCellData:self.dataSource[indexPath.row]];
+    
+    if (indexPath.row == self.dataSource.count - 30) {
+        [self addTestData];
+    }
     return cell;
 }
 
 #pragma mark - Prevate Method
 - (void)addTestData {
     if (self.dataSource == nil) {
-        self.dataSource = [[NSMutableArray alloc] initWithCapacity:20];
+        self.dataSource = [[NSMutableArray alloc] initWithCapacity:50];
     }
     
-    for (int i = 0; i < 20; i ++) {
-        TestDataModel * model = [[TestDataModel alloc] init];
-        model.title = @"行歌";
-        NSDateFormatter *dataFormatter = [[NSDateFormatter alloc] init];
-        [dataFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-        model.time = [dataFormatter stringFromDate:[NSDate date]];
-        
-        NSString *imageName = [NSString stringWithFormat:@"%d.jpg", arc4random()%5];
-        model.imageName =imageName;
-        model.content = [contentText substringFromIndex:arc4random()%contentText.length];
-        [self.dataSource addObject:model];
-    }
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        for (int i = 0; i < 50; i ++) {
+            TestDataModel * model = [[TestDataModel alloc] init];
+            model.title = @"行歌";
+            NSDateFormatter *dataFormatter = [[NSDateFormatter alloc] init];
+            [dataFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+            model.time = [dataFormatter stringFromDate:[NSDate date]];
+            
+            NSString *imageName = [NSString stringWithFormat:@"%d.jpg", arc4random()%5];
+            model.imageName =imageName;
+            model.content = [contentText substringFromIndex:arc4random()%contentText.length];
+            [self.dataSource addObject:model];
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
+    });
+    
 }
 
 
