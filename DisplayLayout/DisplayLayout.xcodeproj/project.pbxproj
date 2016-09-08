@@ -21,6 +21,7 @@
 		F4F734CB1D816E1200FAD236 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4F734C51D816E1200FAD236 /* 3.jpg */; };
 		F4F734CC1D816E1200FAD236 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4F734C61D816E1200FAD236 /* 4.jpg */; };
 		F4F734CD1D816E1200FAD236 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4F734C71D816E1200FAD236 /* 5.jpg */; };
+		F4F734D31D816F7800FAD236 /* TestDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F734D21D816F7800FAD236 /* TestDataModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		F4F734C51D816E1200FAD236 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		F4F734C61D816E1200FAD236 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
 		F4F734C71D816E1200FAD236 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		F4F734D11D816F7800FAD236 /* TestDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDataModel.h; sourceTree = "<group>"; };
+		F4F734D21D816F7800FAD236 /* TestDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDataModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 		F4F734B11D816D8300FAD236 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F4F734D11D816F7800FAD236 /* TestDataModel.h */,
+				F4F734D21D816F7800FAD236 /* TestDataModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,6 +247,7 @@
 				F4F734A01D8166B600FAD236 /* AutolayoutTableViewController.m in Sources */,
 				F4F7348F1D81600300FAD236 /* FPSDisplay.m in Sources */,
 				F4F734721D810AB300FAD236 /* AppDelegate.m in Sources */,
+				F4F734D31D816F7800FAD236 /* TestDataModel.m in Sources */,
 				F4F7346F1D810AB300FAD236 /* main.m in Sources */,
 				F4F734A31D81671C00FAD236 /* AutolayoutTableViewCell.m in Sources */,
 			);

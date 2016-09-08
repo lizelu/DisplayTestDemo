@@ -139,6 +139,12 @@
                                         <constraint firstItem="JFu-Le-VWu" firstAttribute="top" secondItem="GaL-lQ-c6m" secondAttribute="top" constant="8" id="z8t-Ub-HU6"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contentLabel" destination="UTE-Pm-i1p" id="Awj-ZV-FaL"/>
+                                    <outlet property="headerImageView" destination="JFu-Le-VWu" id="5HQ-1c-Uww"/>
+                                    <outlet property="timeLabel" destination="3WN-8o-Z5a" id="1n4-od-pRl"/>
+                                    <outlet property="titleLable" destination="yAR-ku-V7b" id="PjF-B9-2x1"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

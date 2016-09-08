@@ -8,6 +8,10 @@
 
 #import "AutolayoutTableViewCell.h"
 @interface AutolayoutTableViewCell()
+@property (strong, nonatomic) IBOutlet UIImageView *headerImageView;
+@property (strong, nonatomic) IBOutlet UILabel *titleLable;
+@property (strong, nonatomic) IBOutlet UILabel *timeLabel;
+@property (strong, nonatomic) IBOutlet UITextView *contentLabel;
 
 @end
 
@@ -15,13 +19,21 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    self.headerImageView.layer.cornerRadius = self.headerImageView.frame.size.height/2;
+    self.headerImageView.clipsToBounds = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)configCellData:(TestDataModel *)model {
+    [self.headerImageView setImage:[UIImage imageNamed:model.imageName]];
+    [self.titleLable setText:model.title];
+    [self.timeLabel setText:model.time];
+    [self.contentLabel setText:model.content];
 }
 
 @end

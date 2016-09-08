@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "TestDataModel.h"
 @interface AutolayoutTableViewCell : UITableViewCell
-
+- (void)configCellData:(TestDataModel *)model;
 @end
