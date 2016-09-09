@@ -20,6 +20,8 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
+        self.dataSource = [[NSMutableArray alloc] initWithCapacity:50];
+        [self addTestData];
     }
     return self;
 }
@@ -30,10 +32,6 @@
 
 #pragma mark - Prevate Method
 - (void)addTestData {
-    if (self.dataSource == nil) {
-        self.dataSource = [[NSMutableArray alloc] initWithCapacity:50];
-    }
-    
     dispatch_queue_t concurrentQueue = dispatch_queue_create("zeluli.concurrent", DISPATCH_QUEUE_CONCURRENT);
     dispatch_group_t group = dispatch_group_create();
     
