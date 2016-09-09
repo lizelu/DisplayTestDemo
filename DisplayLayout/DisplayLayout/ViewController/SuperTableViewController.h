@@ -12,4 +12,5 @@
 @interface SuperTableViewController : UITableViewController
 @property (nonatomic, strong) NSMutableArray *dataSource;
 - (void)addTestData;
+- (void)registerAutolayoutTableViewCell;
 @end

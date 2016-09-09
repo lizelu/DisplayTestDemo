@@ -24,6 +24,7 @@
 		F4F734D31D816F7800FAD236 /* TestDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F734D21D816F7800FAD236 /* TestDataModel.m */; };
 		F4F734D61D824D9400FAD236 /* DataSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F734D51D824D9400FAD236 /* DataSupport.m */; };
 		F4F734D91D825D7700FAD236 /* SuperTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F734D81D825D7700FAD236 /* SuperTableViewController.m */; };
+		F4F734DB1D82647A00FAD236 /* AutolayoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4F734DA1D82647A00FAD236 /* AutolayoutTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		F4F734D51D824D9400FAD236 /* DataSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSupport.m; sourceTree = "<group>"; };
 		F4F734D71D825D7600FAD236 /* SuperTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperTableViewController.h; sourceTree = "<group>"; };
 		F4F734D81D825D7700FAD236 /* SuperTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperTableViewController.m; sourceTree = "<group>"; };
+		F4F734DA1D82647A00FAD236 /* AutolayoutTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutolayoutTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				F4F7349F1D8166B600FAD236 /* AutolayoutTableViewController.m */,
 				F4F734A11D81671C00FAD236 /* AutolayoutTableViewCell.h */,
 				F4F734A21D81671C00FAD236 /* AutolayoutTableViewCell.m */,
+				F4F734DA1D82647A00FAD236 /* AutolayoutTableViewCell.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4F734DB1D82647A00FAD236 /* AutolayoutTableViewCell.xib in Resources */,
 				F4F734CC1D816E1200FAD236 /* 4.jpg in Resources */,
 				F4F734CA1D816E1200FAD236 /* 2.jpg in Resources */,
 				F4F734C81D816E1200FAD236 /* 0.jpg in Resources */,
