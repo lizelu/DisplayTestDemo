@@ -8,7 +8,6 @@
 
 #import "SuperTableViewController.h"
 #import "DataSupport.h"
-#define CELL_REUSE_ID @"AutolayoutTableViewCell"
 @interface SuperTableViewController ()
 @property (nonatomic, strong) DataSupport *dataSupport;
 @end
@@ -18,7 +17,7 @@
 #pragma mark - Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self registerTableViewCell];
     [self createDataSupport];
 }
 
@@ -45,6 +44,19 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.dataSource.count;
 }
+
+#pragma mark - Table view data source
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    SuperTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[self getReuseIdentifier] forIndexPath:indexPath];
+    [cell configCellData:self.dataSource[indexPath.row]];
+    
+    if (indexPath.row == self.dataSource.count - 30) {
+        [self addTestData];
+    }
+    return cell;
+}
+
 
 #pragma mark - Private Method
 
@@ -85,9 +97,14 @@
     [self.dataSupport addTestData];
 }
 
-- (void)registerAutolayoutTableViewCell {
-    UINib *cellNib = [UINib nibWithNibName:@"AutolayoutTableViewCell" bundle:[NSBundle mainBundle]];
-    [self.tableView registerNib:cellNib forCellReuseIdentifier:CELL_REUSE_ID];
+/**
+ *  子类提供具体的cell重用符, 默认是AutolayoutTableViewCell
+ */
+- (NSString *)getReuseIdentifier {
+    return @"";
+}
+
+- (void)registerTableViewCell {
 }
 
 @end

@@ -14,7 +14,6 @@
 		F4F7347D1D810AB300FAD236 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F7347B1D810AB300FAD236 /* LaunchScreen.storyboard */; };
 		F4F7348F1D81600300FAD236 /* FPSDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F7348B1D81600300FAD236 /* FPSDisplay.m */; };
 		F4F734A01D8166B600FAD236 /* AutolayoutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F7349F1D8166B600FAD236 /* AutolayoutTableViewController.m */; };
-		F4F734A31D81671C00FAD236 /* AutolayoutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F734A21D81671C00FAD236 /* AutolayoutTableViewCell.m */; };
 		F4F734C81D816E1200FAD236 /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4F734C21D816E1200FAD236 /* 0.jpg */; };
 		F4F734C91D816E1200FAD236 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4F734C31D816E1200FAD236 /* 1.jpg */; };
 		F4F734CA1D816E1200FAD236 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4F734C41D816E1200FAD236 /* 2.jpg */; };
@@ -24,10 +23,14 @@
 		F4F734D31D816F7800FAD236 /* TestDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F734D21D816F7800FAD236 /* TestDataModel.m */; };
 		F4F734D61D824D9400FAD236 /* DataSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F734D51D824D9400FAD236 /* DataSupport.m */; };
 		F4F734D91D825D7700FAD236 /* SuperTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F734D81D825D7700FAD236 /* SuperTableViewController.m */; };
-		F4F734DB1D82647A00FAD236 /* AutolayoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4F734DA1D82647A00FAD236 /* AutolayoutTableViewCell.xib */; };
 		F4F734DE1D82678F00FAD236 /* CountHeightTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F734DD1D82678F00FAD236 /* CountHeightTableViewController.m */; };
 		F4F734E41D82B72000FAD236 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F734E31D82B72000FAD236 /* MainTableViewController.m */; };
 		F4F734E81D82BAB100FAD236 /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F734E71D82BAB100FAD236 /* ImageCache.m */; };
+		F4F734EF1D82C03A00FAD236 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F734EE1D82C03A00FAD236 /* UIView+Frame.m */; };
+		F4F734F61D82C24200FAD236 /* AutolayoutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F734F21D82C24200FAD236 /* AutolayoutTableViewCell.m */; };
+		F4F734F71D82C24200FAD236 /* AutolayoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4F734F31D82C24200FAD236 /* AutolayoutTableViewCell.xib */; };
+		F4F734F81D82C24200FAD236 /* FrameLayoutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F734F51D82C24200FAD236 /* FrameLayoutTableViewCell.m */; };
+		F4F734FB1D82C25300FAD236 /* SuperTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F734FA1D82C25300FAD236 /* SuperTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,8 +46,6 @@
 		F4F7348B1D81600300FAD236 /* FPSDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPSDisplay.m; sourceTree = "<group>"; };
 		F4F7349E1D8166B600FAD236 /* AutolayoutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutolayoutTableViewController.h; sourceTree = "<group>"; };
 		F4F7349F1D8166B600FAD236 /* AutolayoutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutolayoutTableViewController.m; sourceTree = "<group>"; };
-		F4F734A11D81671C00FAD236 /* AutolayoutTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutolayoutTableViewCell.h; sourceTree = "<group>"; };
-		F4F734A21D81671C00FAD236 /* AutolayoutTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutolayoutTableViewCell.m; sourceTree = "<group>"; };
 		F4F734C21D816E1200FAD236 /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
 		F4F734C31D816E1200FAD236 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		F4F734C41D816E1200FAD236 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
@@ -57,7 +58,6 @@
 		F4F734D51D824D9400FAD236 /* DataSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSupport.m; sourceTree = "<group>"; };
 		F4F734D71D825D7600FAD236 /* SuperTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperTableViewController.h; sourceTree = "<group>"; };
 		F4F734D81D825D7700FAD236 /* SuperTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperTableViewController.m; sourceTree = "<group>"; };
-		F4F734DA1D82647A00FAD236 /* AutolayoutTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutolayoutTableViewCell.xib; sourceTree = "<group>"; };
 		F4F734DC1D82678F00FAD236 /* CountHeightTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountHeightTableViewController.h; sourceTree = "<group>"; };
 		F4F734DD1D82678F00FAD236 /* CountHeightTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountHeightTableViewController.m; sourceTree = "<group>"; };
 		F4F734DF1D82AD9F00FAD236 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -66,6 +66,15 @@
 		F4F734E31D82B72000FAD236 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		F4F734E61D82BAB100FAD236 /* ImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCache.h; sourceTree = "<group>"; };
 		F4F734E71D82BAB100FAD236 /* ImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCache.m; sourceTree = "<group>"; };
+		F4F734ED1D82C03A00FAD236 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		F4F734EE1D82C03A00FAD236 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		F4F734F11D82C24200FAD236 /* AutolayoutTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutolayoutTableViewCell.h; sourceTree = "<group>"; };
+		F4F734F21D82C24200FAD236 /* AutolayoutTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutolayoutTableViewCell.m; sourceTree = "<group>"; };
+		F4F734F31D82C24200FAD236 /* AutolayoutTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutolayoutTableViewCell.xib; sourceTree = "<group>"; };
+		F4F734F41D82C24200FAD236 /* FrameLayoutTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameLayoutTableViewCell.h; sourceTree = "<group>"; };
+		F4F734F51D82C24200FAD236 /* FrameLayoutTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameLayoutTableViewCell.m; sourceTree = "<group>"; };
+		F4F734F91D82C25300FAD236 /* SuperTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperTableViewCell.h; sourceTree = "<group>"; };
+		F4F734FA1D82C25300FAD236 /* SuperTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +107,7 @@
 		F4F7346C1D810AB300FAD236 /* DisplayLayout */ = {
 			isa = PBXGroup;
 			children = (
+				F4F734EC1D82C03A00FAD236 /* Extension */,
 				F4F734E51D82BA9100FAD236 /* Tools */,
 				F4F734E01D82ADEF00FAD236 /* Config */,
 				F4F734B11D816D8300FAD236 /* Model */,
@@ -138,15 +148,13 @@
 		F4F7348C1D81600300FAD236 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F4F734F01D82C24200FAD236 /* TableViewCell */,
 				F4F734D71D825D7600FAD236 /* SuperTableViewController.h */,
 				F4F734D81D825D7700FAD236 /* SuperTableViewController.m */,
 				F4F7349E1D8166B600FAD236 /* AutolayoutTableViewController.h */,
 				F4F7349F1D8166B600FAD236 /* AutolayoutTableViewController.m */,
 				F4F734DC1D82678F00FAD236 /* CountHeightTableViewController.h */,
 				F4F734DD1D82678F00FAD236 /* CountHeightTableViewController.m */,
-				F4F734A11D81671C00FAD236 /* AutolayoutTableViewCell.h */,
-				F4F734A21D81671C00FAD236 /* AutolayoutTableViewCell.m */,
-				F4F734DA1D82647A00FAD236 /* AutolayoutTableViewCell.xib */,
 				F4F734E21D82B72000FAD236 /* MainTableViewController.h */,
 				F4F734E31D82B72000FAD236 /* MainTableViewController.m */,
 			);
@@ -216,6 +224,29 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		F4F734EC1D82C03A00FAD236 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F4F734ED1D82C03A00FAD236 /* UIView+Frame.h */,
+				F4F734EE1D82C03A00FAD236 /* UIView+Frame.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F4F734F01D82C24200FAD236 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F4F734F91D82C25300FAD236 /* SuperTableViewCell.h */,
+				F4F734FA1D82C25300FAD236 /* SuperTableViewCell.m */,
+				F4F734F11D82C24200FAD236 /* AutolayoutTableViewCell.h */,
+				F4F734F21D82C24200FAD236 /* AutolayoutTableViewCell.m */,
+				F4F734F31D82C24200FAD236 /* AutolayoutTableViewCell.xib */,
+				F4F734F41D82C24200FAD236 /* FrameLayoutTableViewCell.h */,
+				F4F734F51D82C24200FAD236 /* FrameLayoutTableViewCell.m */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -273,7 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4F734DB1D82647A00FAD236 /* AutolayoutTableViewCell.xib in Resources */,
+				F4F734F71D82C24200FAD236 /* AutolayoutTableViewCell.xib in Resources */,
 				F4F734CC1D816E1200FAD236 /* 4.jpg in Resources */,
 				F4F734CA1D816E1200FAD236 /* 2.jpg in Resources */,
 				F4F734C81D816E1200FAD236 /* 0.jpg in Resources */,
@@ -298,12 +329,15 @@
 				F4F7348F1D81600300FAD236 /* FPSDisplay.m in Sources */,
 				F4F734721D810AB300FAD236 /* AppDelegate.m in Sources */,
 				F4F734D91D825D7700FAD236 /* SuperTableViewController.m in Sources */,
+				F4F734EF1D82C03A00FAD236 /* UIView+Frame.m in Sources */,
 				F4F734E81D82BAB100FAD236 /* ImageCache.m in Sources */,
 				F4F734D31D816F7800FAD236 /* TestDataModel.m in Sources */,
 				F4F734D61D824D9400FAD236 /* DataSupport.m in Sources */,
+				F4F734FB1D82C25300FAD236 /* SuperTableViewCell.m in Sources */,
 				F4F7346F1D810AB300FAD236 /* main.m in Sources */,
+				F4F734F81D82C24200FAD236 /* FrameLayoutTableViewCell.m in Sources */,
+				F4F734F61D82C24200FAD236 /* AutolayoutTableViewCell.m in Sources */,
 				F4F734E41D82B72000FAD236 /* MainTableViewController.m in Sources */,
-				F4F734A31D81671C00FAD236 /* AutolayoutTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

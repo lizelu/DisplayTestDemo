@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TestDataModel.h"
+#import "SuperTableViewCell.h"
 
 @interface SuperTableViewController : UITableViewController
 @property (nonatomic, strong) NSMutableArray *dataSource;
 - (void)addTestData;
-- (void)registerAutolayoutTableViewCell;
+- (void)registerTableViewCell;
+- (NSString *)getReuseIdentifier;
 @end

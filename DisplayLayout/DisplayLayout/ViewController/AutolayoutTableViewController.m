@@ -7,7 +7,7 @@
 //
 
 #import "AutolayoutTableViewController.h"
-#import "AutolayoutTableViewCell.h"
+#define CELL_REUSE_ID @"AutolayoutTableViewCell"
 @interface AutolayoutTableViewController ()
 @end
 
@@ -17,27 +17,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.estimatedRowHeight = 100.0;  //设置预估值
-    [self registerAutolayoutTableViewCell];
 }
 
 #pragma mark - UITableViewDelegate
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return UITableViewAutomaticDimension;       //自动调整约束，性能非常低，灰常的卡
 }
 
-#pragma mark - Table view data source
+#pragma mark - Override Super Method
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    AutolayoutTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AutolayoutTableViewCell" forIndexPath:indexPath];
-    [cell configCellData:self.dataSource[indexPath.row]];
-    
-    if (indexPath.row == self.dataSource.count - 30) {
-        [self addTestData];
-    }
-    return cell;
+- (NSString *)getReuseIdentifier {
+    return CELL_REUSE_ID;
 }
 
-#pragma mark - Prevate Method
+- (void)registerTableViewCell {
+    UINib *cellNib = [UINib nibWithNibName:@"AutolayoutTableViewCell" bundle:[NSBundle mainBundle]];
+    [self.tableView registerNib:cellNib forCellReuseIdentifier:CELL_REUSE_ID];
+}
+
 
 @end

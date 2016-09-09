@@ -7,7 +7,7 @@
 //
 
 #import "CountHeightTableViewController.h"
-#import "AutolayoutTableViewCell.h"
+#define CELL_REUSE_ID @"AutolayoutTableViewCell"
 @interface CountHeightTableViewController ()
 @property (nonatomic, strong) NSMutableArray *heightArray;
 @end
@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //self.tableView.estimatedRowHeight = 100.0;  //设置预估值
-    [self registerAutolayoutTableViewCell];
+    [self registerTableViewCell];
     self.heightArray = [[NSMutableArray alloc] init];
 }
 
@@ -34,19 +34,14 @@
     return 100;
 }
 
-#pragma mark - Table view data source
+#pragma mark - Override Super Method
+- (NSString *)getReuseIdentifier {
+    return CELL_REUSE_ID;
+}
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    AutolayoutTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AutolayoutTableViewCell" forIndexPath:indexPath];
-    [cell configCellData:self.dataSource[indexPath.row]];
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        if (indexPath.row == self.dataSource.count - 30) {
-            [self addTestData];
-        }
-    });
-    
-    return cell;
+- (void)registerTableViewCell {
+    UINib *cellNib = [UINib nibWithNibName:@"AutolayoutTableViewCell" bundle:[NSBundle mainBundle]];
+    [self.tableView registerNib:cellNib forCellReuseIdentifier:CELL_REUSE_ID];
 }
 
 
