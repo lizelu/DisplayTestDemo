@@ -64,8 +64,10 @@
     
     NSInteger endIndex = arc4random() % contentText.length;
     model.content = [contentText substringToIndex:endIndex];
-    
     model.textHeight = [self countTextHeight:model.content];
+    model.cellHeight = model.textHeight + 60;
+   
+    
 //    NSLog(@"%lf", );
     
     [self.dataSource addObject:model];
@@ -81,7 +83,7 @@
     [attributeString addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, text.length)];
     NSStringDrawingOptions options = NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading;
     CGRect rect = [attributeString boundingRectWithSize:CGSizeMake(SCREEN_WIDTH - 30, CGFLOAT_MAX) options:options context:nil];
-    return rect.size.height + 85;
+    return rect.size.height + 40;
 }
 
 - (void)updateDataSource {

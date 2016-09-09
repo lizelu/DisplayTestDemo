@@ -1,26 +1,26 @@
 //
-//  CountHeightTableViewController.m
+//  FrameCountTableViewController.m
 //  DisplayLayout
 //
 //  Created by Mr.LuDashi on 16/9/9.
 //  Copyright © 2016年 ZeluLi. All rights reserved.
 //
 
-#import "CountHeightTableViewController.h"
-#define CELL_REUSE_ID @"AutolayoutTableViewCell"
-@interface CountHeightTableViewController ()
+#import "FrameCountTableViewController.h"
+#import "FrameLayoutTableViewCell.h"
+
+#define CELL_REUSE_ID @"FrameLayoutTableViewCell"
+
+@interface FrameCountTableViewController ()
+
 @end
 
-@implementation CountHeightTableViewController
-
-
-#pragma mark - Life Cycle
+@implementation FrameCountTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
 }
-
-#pragma mark - UITableViewDelegate
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row < self.dataSource.count) {
@@ -36,8 +36,7 @@
 }
 
 - (void)registerTableViewCell {
-    UINib *cellNib = [UINib nibWithNibName:@"AutolayoutTableViewCell" bundle:[NSBundle mainBundle]];
-    [self.tableView registerNib:cellNib forCellReuseIdentifier:CELL_REUSE_ID];
+    [self.tableView registerClass:NSClassFromString(CELL_REUSE_ID) forCellReuseIdentifier:CELL_REUSE_ID];
 }
 
 

@@ -66,6 +66,31 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="YKr-4t-Fbu">
+                                        <rect key="frame" x="0.0" y="152" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YKr-4t-Fbu" id="d4V-SI-1wG">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WK6-nG-a9c">
+                                                    <rect key="frame" x="15" y="0.0" width="537" height="43"/>
+                                                    <state key="normal" title="Framelayout+CountHeight">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="tapThridButton:" destination="iy3-aG-dJp" eventType="touchUpInside" id="kpa-JG-qv7"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="WK6-nG-a9c" secondAttribute="bottom" id="3wc-mH-P4C"/>
+                                                <constraint firstAttribute="trailing" secondItem="WK6-nG-a9c" secondAttribute="trailing" constant="15" id="Ep5-gW-h1x"/>
+                                                <constraint firstItem="WK6-nG-a9c" firstAttribute="leading" secondItem="d4V-SI-1wG" secondAttribute="leading" constant="15" id="wJr-pE-BXp"/>
+                                                <constraint firstItem="WK6-nG-a9c" firstAttribute="top" secondItem="d4V-SI-1wG" secondAttribute="top" id="wYL-sz-Swx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>

@@ -31,6 +31,7 @@
 		F4F734F71D82C24200FAD236 /* AutolayoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4F734F31D82C24200FAD236 /* AutolayoutTableViewCell.xib */; };
 		F4F734F81D82C24200FAD236 /* FrameLayoutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F734F51D82C24200FAD236 /* FrameLayoutTableViewCell.m */; };
 		F4F734FB1D82C25300FAD236 /* SuperTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F734FA1D82C25300FAD236 /* SuperTableViewCell.m */; };
+		F4F734FE1D82C94B00FAD236 /* FrameCountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F734FD1D82C94B00FAD236 /* FrameCountTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,8 @@
 		F4F734F51D82C24200FAD236 /* FrameLayoutTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameLayoutTableViewCell.m; sourceTree = "<group>"; };
 		F4F734F91D82C25300FAD236 /* SuperTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperTableViewCell.h; sourceTree = "<group>"; };
 		F4F734FA1D82C25300FAD236 /* SuperTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperTableViewCell.m; sourceTree = "<group>"; };
+		F4F734FC1D82C94B00FAD236 /* FrameCountTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameCountTableViewController.h; sourceTree = "<group>"; };
+		F4F734FD1D82C94B00FAD236 /* FrameCountTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameCountTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +158,8 @@
 				F4F7349F1D8166B600FAD236 /* AutolayoutTableViewController.m */,
 				F4F734DC1D82678F00FAD236 /* CountHeightTableViewController.h */,
 				F4F734DD1D82678F00FAD236 /* CountHeightTableViewController.m */,
+				F4F734FC1D82C94B00FAD236 /* FrameCountTableViewController.h */,
+				F4F734FD1D82C94B00FAD236 /* FrameCountTableViewController.m */,
 				F4F734E21D82B72000FAD236 /* MainTableViewController.h */,
 				F4F734E31D82B72000FAD236 /* MainTableViewController.m */,
 			);
@@ -325,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4F734DE1D82678F00FAD236 /* CountHeightTableViewController.m in Sources */,
+				F4F734FE1D82C94B00FAD236 /* FrameCountTableViewController.m in Sources */,
 				F4F734A01D8166B600FAD236 /* AutolayoutTableViewController.m in Sources */,
 				F4F7348F1D81600300FAD236 /* FPSDisplay.m in Sources */,
 				F4F734721D810AB300FAD236 /* AppDelegate.m in Sources */,

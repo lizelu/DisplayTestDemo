@@ -49,6 +49,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SuperTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[self getReuseIdentifier] forIndexPath:indexPath];
+    if (cell == nil) {
+        cell = [[SuperTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:[self getReuseIdentifier]];
+    }
     [cell configCellData:self.dataSource[indexPath.row]];
     
     if (indexPath.row == self.dataSource.count - 30) {
