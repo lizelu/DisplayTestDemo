@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="G8y-ed-ySv">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -23,11 +24,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autolayout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3V9-cy-HiJ">
-                                                    <rect key="frame" x="17" y="0.0" width="103" height="43"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="103" id="X1v-my-ggO"/>
-                                                    </constraints>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autolayout+AutomaticDimension" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3V9-cy-HiJ">
+                                                    <rect key="frame" x="17" y="0.0" width="530" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -36,6 +34,7 @@
                                             <constraints>
                                                 <constraint firstItem="3V9-cy-HiJ" firstAttribute="leading" secondItem="abV-YB-FTG" secondAttribute="leading" constant="17" id="NTF-NZ-JVu"/>
                                                 <constraint firstItem="3V9-cy-HiJ" firstAttribute="top" secondItem="abV-YB-FTG" secondAttribute="top" id="slg-wc-xfG"/>
+                                                <constraint firstAttribute="trailing" secondItem="3V9-cy-HiJ" secondAttribute="trailing" constant="20" id="u8M-Ni-Edf"/>
                                                 <constraint firstAttribute="bottom" secondItem="3V9-cy-HiJ" secondAttribute="bottom" id="v5g-Hg-YUW"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -152,7 +151,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gwk-4M-Vb5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1497" y="352"/>
+            <point key="canvasLocation" x="1548" y="352"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mcL-st-WmO">

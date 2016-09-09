@@ -22,6 +22,7 @@
 		F4F734CC1D816E1200FAD236 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4F734C61D816E1200FAD236 /* 4.jpg */; };
 		F4F734CD1D816E1200FAD236 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4F734C71D816E1200FAD236 /* 5.jpg */; };
 		F4F734D31D816F7800FAD236 /* TestDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F734D21D816F7800FAD236 /* TestDataModel.m */; };
+		F4F734D61D824D9400FAD236 /* DataSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F734D51D824D9400FAD236 /* DataSupport.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		F4F734C71D816E1200FAD236 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
 		F4F734D11D816F7800FAD236 /* TestDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDataModel.h; sourceTree = "<group>"; };
 		F4F734D21D816F7800FAD236 /* TestDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDataModel.m; sourceTree = "<group>"; };
+		F4F734D41D824D9400FAD236 /* DataSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSupport.h; sourceTree = "<group>"; };
+		F4F734D51D824D9400FAD236 /* DataSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSupport.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,8 @@
 		F4F734B21D816D8300FAD236 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				F4F734D41D824D9400FAD236 /* DataSupport.h */,
+				F4F734D51D824D9400FAD236 /* DataSupport.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 				F4F7348F1D81600300FAD236 /* FPSDisplay.m in Sources */,
 				F4F734721D810AB300FAD236 /* AppDelegate.m in Sources */,
 				F4F734D31D816F7800FAD236 /* TestDataModel.m in Sources */,
+				F4F734D61D824D9400FAD236 /* DataSupport.m in Sources */,
 				F4F7346F1D810AB300FAD236 /* main.m in Sources */,
 				F4F734A31D81671C00FAD236 /* AutolayoutTableViewCell.m in Sources */,
 			);
