@@ -10,7 +10,7 @@
 #import "AutolayoutTableViewCell.h"
 #import "TestDataModel.h"
 
-#define contentText @"成长是一场冒险，勇敢的人先上路，代价是错过风景，不能回头，成长是一场游戏，勇敢的人先开始，不管难过与快乐，不能回头，行歌，在草长莺飞的季节里喃喃低唱，到处人潮汹涌还会孤独怎么，在灯火阑珊处竟然会觉得荒芜，从前轻狂绕过时光，成长是一场冒险，勇敢的人先上路，代价是错过风景，不能回头，成长是一场游戏，勇敢的人先开始，不管难过与快乐，不能回头，行歌，谁在一边走一边唱一边回头张望，那些苦涩始终都要去尝，怎么，长大后不会大笑也不会再大哭了，从前轻狂绕过时光，让我们彼此分享互相陪伴吧，一起面对人生这一刻的孤独吧，行歌，在草长莺飞的季节里喃喃低唱，从前轻狂绕过时光"
+#define contentText @"成长是一场冒险，勇敢的人先上路，代价是错过风景，不能回头，成长是一场游戏，勇敢的人先开始，不管难过与快乐，不能回头，行歌，在草长莺飞的季节里喃喃低唱，到处人潮汹涌还会孤独怎么，在灯火阑珊处竟然会觉得荒芜，从前轻狂绕过时光，成长是一场冒险，勇敢的人先上路，代价是错过风景，不能回头，成长是一场游戏，勇敢的人先开始，不管难过与快乐，不能回头，行歌，谁在一边走一边唱一边回头张望，那些苦涩始终都要去尝，怎么，长大后不会大笑也不会再大哭了，从前轻狂绕过时光，让我们彼此分享互相陪伴吧，一起面对人生这一刻的孤独吧，行歌，在草长莺飞的季节里喃喃低唱，从前轻狂绕过时光.成长是一场冒险，勇敢的人先上路，代价是错过风景，不能回头，成长是一场游戏，勇敢的人先开始，不管难过与快乐，不能回头，行歌，在草长莺飞的季节里喃喃低唱，到处人潮汹涌还会孤独怎么，在灯火阑珊处竟然会觉得荒芜，从前轻狂绕过时光，成长是一场冒险，勇敢的人先上路，代价是错过风景，不能回头，成长是一场游戏，勇敢的人先开始，不管难过与快乐，不能回头，行歌，谁在一边走一边唱一边回头张望，那些苦涩始终都要去尝，怎么，长大后不会大笑也不会再大哭了，从前轻狂绕过时光，让我们彼此分享互相陪伴吧，一起面对人生这一刻的孤独吧，行歌，在草长莺飞的季节里喃喃低唱，从前轻狂绕过时光"
 
 @interface AutolayoutTableViewController ()
 @property (nonatomic, strong) NSMutableArray *dataSource;
@@ -64,8 +64,10 @@
         self.dataSource = [[NSMutableArray alloc] initWithCapacity:50];
     }
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        for (int i = 0; i < 50; i ++) {
+    dispatch_queue_t concurrentQueue = dispatch_queue_create("zeluli.concurrent", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_group_t group = dispatch_group_create();
+    for (int i = 0; i < 50; i ++) {
+        dispatch_group_async(group, concurrentQueue, ^{
             TestDataModel * model = [[TestDataModel alloc] init];
             model.title = @"行歌";
             NSDateFormatter *dataFormatter = [[NSDateFormatter alloc] init];
@@ -74,14 +76,16 @@
             
             NSString *imageName = [NSString stringWithFormat:@"%d.jpg", arc4random()%5];
             model.imageName =imageName;
-            model.content = [contentText substringFromIndex:arc4random()%contentText.length];
+            
+            NSInteger endIndex = arc4random()%contentText.length;
+            model.content = [contentText substringToIndex:endIndex];
             [self.dataSource addObject:model];
-        }
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.tableView reloadData];
         });
-    });
+    }
     
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
+    });
 }
 
 
