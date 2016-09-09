@@ -18,6 +18,7 @@
 #pragma mark - Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self createDataSupport];
 }
 
@@ -31,9 +32,9 @@
 
 #pragma mark - UITableViewDelegate
 
-- (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
-    return NO;
-}
+//- (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+//    return NO;
+//}
 
 #pragma mark - Table view data source
 
@@ -46,6 +47,29 @@
 }
 
 #pragma mark - Private Method
+
+/**
+ *  对TableView进行优化
+ */
+- (void)configTableView {
+    self.tableView.delaysContentTouches = NO;
+    self.tableView.canCancelContentTouches = YES;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    // Remove touch delay (since iOS 8)
+    UIView *wrapView = self.tableView.subviews.firstObject;
+    
+    // UITableViewWrapperView -- UITableViewCell的父类
+    if (wrapView && [NSStringFromClass(wrapView.class) hasSuffix:@"WrapperView"]) {
+        for (UIGestureRecognizer *gesture in wrapView.gestureRecognizers) {
+            // UIScrollViewDelayedTouchesBeganGestureRecognizer - 禁掉该手势
+            if ([NSStringFromClass(gesture.class) containsString:@"DelayedTouchesBegan"] ) {
+                gesture.enabled = NO;
+                break;
+            }
+        }
+    }
+
+}
 
 - (void)createDataSupport {
     self.dataSupport = [[DataSupport alloc] init];
