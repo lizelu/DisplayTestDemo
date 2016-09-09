@@ -23,6 +23,7 @@
 		F4F734CD1D816E1200FAD236 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4F734C71D816E1200FAD236 /* 5.jpg */; };
 		F4F734D31D816F7800FAD236 /* TestDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F734D21D816F7800FAD236 /* TestDataModel.m */; };
 		F4F734D61D824D9400FAD236 /* DataSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F734D51D824D9400FAD236 /* DataSupport.m */; };
+		F4F734D91D825D7700FAD236 /* SuperTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F734D81D825D7700FAD236 /* SuperTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		F4F734D21D816F7800FAD236 /* TestDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDataModel.m; sourceTree = "<group>"; };
 		F4F734D41D824D9400FAD236 /* DataSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSupport.h; sourceTree = "<group>"; };
 		F4F734D51D824D9400FAD236 /* DataSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSupport.m; sourceTree = "<group>"; };
+		F4F734D71D825D7600FAD236 /* SuperTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperTableViewController.h; sourceTree = "<group>"; };
+		F4F734D81D825D7700FAD236 /* SuperTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 		F4F7348C1D81600300FAD236 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F4F734D71D825D7600FAD236 /* SuperTableViewController.h */,
+				F4F734D81D825D7700FAD236 /* SuperTableViewController.m */,
 				F4F7349E1D8166B600FAD236 /* AutolayoutTableViewController.h */,
 				F4F7349F1D8166B600FAD236 /* AutolayoutTableViewController.m */,
 				F4F734A11D81671C00FAD236 /* AutolayoutTableViewCell.h */,
@@ -252,6 +257,7 @@
 				F4F734A01D8166B600FAD236 /* AutolayoutTableViewController.m in Sources */,
 				F4F7348F1D81600300FAD236 /* FPSDisplay.m in Sources */,
 				F4F734721D810AB300FAD236 /* AppDelegate.m in Sources */,
+				F4F734D91D825D7700FAD236 /* SuperTableViewController.m in Sources */,
 				F4F734D31D816F7800FAD236 /* TestDataModel.m in Sources */,
 				F4F734D61D824D9400FAD236 /* DataSupport.m in Sources */,
 				F4F7346F1D810AB300FAD236 /* main.m in Sources */,

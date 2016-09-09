@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SuperTableViewController.h"
 
-@interface AutolayoutTableViewController : UITableViewController
+@interface AutolayoutTableViewController : SuperTableViewController
 
 @end

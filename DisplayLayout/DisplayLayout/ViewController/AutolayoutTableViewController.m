@@ -8,37 +8,28 @@
 
 #import "AutolayoutTableViewController.h"
 #import "AutolayoutTableViewCell.h"
-#import "TestDataModel.h"
-#import "DataSupport.h"
 
 @interface AutolayoutTableViewController ()
-@property (nonatomic, strong) NSMutableArray *dataSource;
-@property (nonatomic, strong) DataSupport *dataSupport;
 @end
 
 @implementation AutolayoutTableViewController
 
+#pragma mark - Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.estimatedRowHeight = 100.0;
-    self.dataSupport = [[DataSupport alloc] init];
-    __weak typeof (self) weak_self = self;
-    [self.dataSupport setUpdataDataSourceBlock:^(NSMutableArray *dataSource) {
-        weak_self.dataSource = dataSource;
-        [weak_self.tableView reloadData];
-    }];
-    [self addTestData];
+    self.tableView.estimatedRowHeight = 100.0;  //设置预估值
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - UITableViewDelegate
+
 - (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
     return NO;
 }
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return UITableViewAutomaticDimension;       //自动调整约束，性能非常低，灰常的卡
 }
@@ -53,7 +44,6 @@
     return self.dataSource.count;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AutolayoutTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AutolayoutTableViewCell" forIndexPath:indexPath];
     [cell configCellData:self.dataSource[indexPath.row]];
@@ -65,11 +55,5 @@
 }
 
 #pragma mark - Prevate Method
-- (void)addTestData {
-    [self.dataSupport addTestData];
-}
 
-- (void)dealloc {
-    NSLog(@"释放");
-}
 @end
