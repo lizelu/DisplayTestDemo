@@ -25,6 +25,7 @@
 		F4F734D61D824D9400FAD236 /* DataSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F734D51D824D9400FAD236 /* DataSupport.m */; };
 		F4F734D91D825D7700FAD236 /* SuperTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F734D81D825D7700FAD236 /* SuperTableViewController.m */; };
 		F4F734DB1D82647A00FAD236 /* AutolayoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4F734DA1D82647A00FAD236 /* AutolayoutTableViewCell.xib */; };
+		F4F734DE1D82678F00FAD236 /* CountHeightTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F734DD1D82678F00FAD236 /* CountHeightTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,10 @@
 		F4F734D71D825D7600FAD236 /* SuperTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperTableViewController.h; sourceTree = "<group>"; };
 		F4F734D81D825D7700FAD236 /* SuperTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperTableViewController.m; sourceTree = "<group>"; };
 		F4F734DA1D82647A00FAD236 /* AutolayoutTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutolayoutTableViewCell.xib; sourceTree = "<group>"; };
+		F4F734DC1D82678F00FAD236 /* CountHeightTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountHeightTableViewController.h; sourceTree = "<group>"; };
+		F4F734DD1D82678F00FAD236 /* CountHeightTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountHeightTableViewController.m; sourceTree = "<group>"; };
+		F4F734DF1D82AD9F00FAD236 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F4F734E11D82ADFE00FAD236 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +92,7 @@
 		F4F7346C1D810AB300FAD236 /* DisplayLayout */ = {
 			isa = PBXGroup;
 			children = (
+				F4F734E01D82ADEF00FAD236 /* Config */,
 				F4F734B11D816D8300FAD236 /* Model */,
 				F4F734B21D816D8300FAD236 /* Network */,
 				F4F734B31D816D8300FAD236 /* Resource */,
@@ -100,6 +106,7 @@
 				F4F7347B1D810AB300FAD236 /* LaunchScreen.storyboard */,
 				F4F7347E1D810AB300FAD236 /* Info.plist */,
 				F4F7346D1D810AB300FAD236 /* Supporting Files */,
+				F4F734DF1D82AD9F00FAD236 /* PrefixHeader.pch */,
 			);
 			path = DisplayLayout;
 			sourceTree = "<group>";
@@ -128,6 +135,8 @@
 				F4F734D81D825D7700FAD236 /* SuperTableViewController.m */,
 				F4F7349E1D8166B600FAD236 /* AutolayoutTableViewController.h */,
 				F4F7349F1D8166B600FAD236 /* AutolayoutTableViewController.m */,
+				F4F734DC1D82678F00FAD236 /* CountHeightTableViewController.h */,
+				F4F734DD1D82678F00FAD236 /* CountHeightTableViewController.m */,
 				F4F734A11D81671C00FAD236 /* AutolayoutTableViewCell.h */,
 				F4F734A21D81671C00FAD236 /* AutolayoutTableViewCell.m */,
 				F4F734DA1D82647A00FAD236 /* AutolayoutTableViewCell.xib */,
@@ -179,6 +188,14 @@
 			children = (
 			);
 			path = Vender;
+			sourceTree = "<group>";
+		};
+		F4F734E01D82ADEF00FAD236 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				F4F734E11D82ADFE00FAD236 /* Config.h */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4F734DE1D82678F00FAD236 /* CountHeightTableViewController.m in Sources */,
 				F4F734A01D8166B600FAD236 /* AutolayoutTableViewController.m in Sources */,
 				F4F7348F1D81600300FAD236 /* FPSDisplay.m in Sources */,
 				F4F734721D810AB300FAD236 /* AppDelegate.m in Sources */,
@@ -377,6 +395,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DisplayLayout/PrefixHeader.pch";
 				INFOPLIST_FILE = DisplayLayout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -389,6 +409,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DisplayLayout/PrefixHeader.pch";
 				INFOPLIST_FILE = DisplayLayout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

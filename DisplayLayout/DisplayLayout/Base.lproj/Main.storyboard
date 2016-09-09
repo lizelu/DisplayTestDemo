@@ -41,21 +41,30 @@
                                             <segue destination="Sje-3n-c0L" kind="show" id="m31-hF-jHy"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Xgm-iu-JwP">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Xgm-iu-JwP">
                                         <rect key="frame" x="0.0" y="108" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xgm-iu-JwP" id="Zdi-ez-rId">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autolayout+CountHeight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lmy-ex-gbw">
+                                                    <rect key="frame" x="18" y="0.0" width="530" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Lmy-ex-gbw" secondAttribute="trailing" constant="19" id="4A7-W2-WE4"/>
+                                                <constraint firstItem="Lmy-ex-gbw" firstAttribute="top" secondItem="Zdi-ez-rId" secondAttribute="top" id="6Qh-q7-IQv"/>
+                                                <constraint firstItem="Lmy-ex-gbw" firstAttribute="leading" secondItem="Zdi-ez-rId" secondAttribute="leading" constant="18" id="6h0-7m-l3o"/>
+                                                <constraint firstAttribute="bottom" secondItem="Lmy-ex-gbw" secondAttribute="bottom" id="E6z-BN-xag"/>
+                                            </constraints>
                                         </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="LUf-Nk-eJC">
-                                        <rect key="frame" x="0.0" y="152" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LUf-Nk-eJC" id="O88-28-WoX">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="nPS-S3-Zmc" kind="show" id="TRp-Wx-Fl9"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -87,7 +96,25 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gwk-4M-Vb5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1506" y="352"/>
+            <point key="canvasLocation" x="1539" y="52"/>
+        </scene>
+        <!--Count Height Table View Controller-->
+        <scene sceneID="dFg-LO-V8t">
+            <objects>
+                <tableViewController storyboardIdentifier="CountHeightTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nPS-S3-Zmc" customClass="CountHeightTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="OX5-BI-Jz2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="nPS-S3-Zmc" id="S9Z-Pc-pNL"/>
+                            <outlet property="delegate" destination="nPS-S3-Zmc" id="qec-Gi-DQA"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tg8-0n-rVZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1539" y="713"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mcL-st-WmO">
