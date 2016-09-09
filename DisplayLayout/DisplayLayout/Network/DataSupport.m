@@ -59,10 +59,10 @@
     [dataFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     model.time = [dataFormatter stringFromDate:[NSDate date]];
     
-    NSString *imageName = [NSString stringWithFormat:@"%d.jpg", arc4random()%5];
+    NSString *imageName = [NSString stringWithFormat:@"%d.jpg", arc4random() % 6];
     model.imageName =imageName;
     
-    NSInteger endIndex = arc4random()%contentText.length;
+    NSInteger endIndex = arc4random() % contentText.length;
     model.content = [contentText substringToIndex:endIndex];
     
     model.textHeight = [self countTextHeight:model.content];

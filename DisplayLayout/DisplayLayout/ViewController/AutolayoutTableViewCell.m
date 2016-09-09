@@ -28,7 +28,9 @@
 }
 
 - (void)configCellData:(TestDataModel *)model {
-    [self.headerImageView setImage:[UIImage imageNamed:model.imageName]];
+    //[self.headerImageView setImage:[UIImage imageNamed:model.imageName]];     //直接创建
+    
+    [self.headerImageView setImage:[[ImageCache shareInstance] getCacheImage:model.imageName]];
     [self.titleLable setText:model.title];
     [self.timeLabel setText:model.time];
     [self.contentLabel setText:model.content];
