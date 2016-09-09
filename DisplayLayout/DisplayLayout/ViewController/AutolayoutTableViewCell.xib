@@ -41,7 +41,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="test" translatesAutoresizingMaskIntoConstraints="NO" id="Dr1-Xq-kxI">
-                        <rect key="frame" x="15" y="52" width="571" height="97"/>
+                        <rect key="frame" x="15" y="52" width="570" height="101"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -50,15 +50,15 @@
                 <constraints>
                     <constraint firstItem="HLa-Ol-tX4" firstAttribute="leading" secondItem="28f-05-SOJ" secondAttribute="leading" constant="15" id="3vA-gx-D2O"/>
                     <constraint firstAttribute="trailingMargin" secondItem="JXt-5M-pPl" secondAttribute="trailing" constant="15" id="Ahw-0d-4FM"/>
-                    <constraint firstItem="Dr1-Xq-kxI" firstAttribute="top" secondItem="HLa-Ol-tX4" secondAttribute="bottom" constant="4" id="BUX-iA-Daf"/>
+                    <constraint firstAttribute="bottom" secondItem="Dr1-Xq-kxI" secondAttribute="bottom" constant="13" id="G7T-0d-YeX"/>
                     <constraint firstItem="VjD-E7-DIe" firstAttribute="top" secondItem="28f-05-SOJ" secondAttribute="top" constant="28" id="Lju-tb-Hvt"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="Dr1-Xq-kxI" secondAttribute="trailing" constant="6" id="VYy-Xi-yDV"/>
                     <constraint firstAttribute="trailing" secondItem="VjD-E7-DIe" secondAttribute="trailing" constant="23" id="Xty-f3-v07"/>
                     <constraint firstItem="JXt-5M-pPl" firstAttribute="leading" secondItem="HLa-Ol-tX4" secondAttribute="trailing" constant="15" id="YW0-NT-hbb"/>
                     <constraint firstItem="HLa-Ol-tX4" firstAttribute="top" secondItem="28f-05-SOJ" secondAttribute="top" constant="8" id="fgc-Jq-m3B"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Dr1-Xq-kxI" secondAttribute="bottom" constant="9" id="i0Z-SH-RcW"/>
                     <constraint firstItem="JXt-5M-pPl" firstAttribute="top" secondItem="28f-05-SOJ" secondAttribute="topMargin" id="kBf-yr-hlA"/>
                     <constraint firstItem="VjD-E7-DIe" firstAttribute="leading" secondItem="HLa-Ol-tX4" secondAttribute="trailing" constant="15" id="s5I-OR-Ky1"/>
+                    <constraint firstAttribute="trailing" secondItem="Dr1-Xq-kxI" secondAttribute="trailing" constant="15" id="zaS-nF-SOd"/>
+                    <constraint firstItem="Dr1-Xq-kxI" firstAttribute="top" secondItem="HLa-Ol-tX4" secondAttribute="bottom" constant="4" id="ziV-fM-Vek"/>
                     <constraint firstItem="Dr1-Xq-kxI" firstAttribute="leading" secondItem="28f-05-SOJ" secondAttribute="leading" constant="15" id="zno-DX-wsU"/>
                 </constraints>
             </tableViewCellContentView>

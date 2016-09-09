@@ -14,7 +14,6 @@
 @implementation AutolayoutTableViewController
 
 #pragma mark - Life Cycle
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.estimatedRowHeight = 100.0;  //设置预估值

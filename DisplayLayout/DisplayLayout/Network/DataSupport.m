@@ -8,6 +8,7 @@
 
 #import "DataSupport.h"
 #import "TestDataModel.h"
+#import <UIKit/UIKit.h>
 #define contentText @"成长是一场冒险，勇敢的人先上路，代价是错过风景，不能回头，成长是一场游戏，勇敢的人先开始，不管难过与快乐，不能回头，行歌，在草长莺飞的季节里喃喃低唱，到处人潮汹涌还会孤独怎么，在灯火阑珊处竟然会觉得荒芜，从前轻狂绕过时光，成长是一场冒险，勇敢的人先上路，代价是错过风景，不能回头，成长是一场游戏，勇敢的人先开始，不管难过与快乐，不能回头，行歌，谁在一边走一边唱一边回头张望，那些苦涩始终都要去尝，怎么，长大后不会大笑也不会再大哭了，从前轻狂绕过时光，让我们彼此分享互相陪伴吧，一起面对人生这一刻的孤独吧，行歌，在草长莺飞的季节里喃喃低唱，从前轻狂绕过时光.成长是一场冒险，勇敢的人先上路，代价是错过风景，不能回头，成长是一场游戏，勇敢的人先开始，不管难过与快乐，不能回头，行歌，在草长莺飞的季节里喃喃低唱，到处人潮汹涌还会孤独怎么，在灯火阑珊处竟然会觉得荒芜，从前轻狂绕过时光，成长是一场冒险，勇敢的人先上路，代价是错过风景，不能回头，成长是一场游戏，勇敢的人先开始，不管难过与快乐，不能回头，行歌，谁在一边走一边唱一边回头张望，那些苦涩始终都要去尝，怎么，长大后不会大笑也不会再大哭了，从前轻狂绕过时光，让我们彼此分享互相陪伴吧，一起面对人生这一刻的孤独吧，行歌，在草长莺飞的季节里喃喃低唱，从前轻狂绕过时光"
 
 @interface DataSupport()
@@ -64,7 +65,23 @@
     NSInteger endIndex = arc4random()%contentText.length;
     model.content = [contentText substringToIndex:endIndex];
     
+    model.textHeight = [self countTextHeight:model.content];
+//    NSLog(@"%lf", );
+    
     [self.dataSource addObject:model];
+}
+
+-(CGFloat)countTextHeight:(NSString *) text {
+    
+    NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:text];
+    NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
+    style.lineSpacing = 0;
+    UIFont *font = [UIFont systemFontOfSize:14];
+    [attributeString addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, text.length)];
+    [attributeString addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, text.length)];
+    NSStringDrawingOptions options = NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading;
+    CGRect rect = [attributeString boundingRectWithSize:CGSizeMake(SCREEN_WIDTH - 30, CGFLOAT_MAX) options:options context:nil];
+    return rect.size.height + 85;
 }
 
 - (void)updateDataSource {
