@@ -66,6 +66,11 @@
     model.content = [contentText substringToIndex:endIndex];
     model.textHeight = [self countTextHeight:model.content];
     model.cellHeight = model.textHeight + 60;
+    
+    NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:model.content];
+    text.font = [UIFont systemFontOfSize:14];
+    text.lineSpacing = 3;
+    model.attributeContent = text;
    
     
 //    NSLog(@"%lf", );

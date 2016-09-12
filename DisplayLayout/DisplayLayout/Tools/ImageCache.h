@@ -11,4 +11,5 @@
 @interface ImageCache : NSObject
 + (instancetype)shareInstance;
 - (id)getCacheImage: (NSString *)key;
+- (id)getCacheYYImage: (NSString *)key;
 @end

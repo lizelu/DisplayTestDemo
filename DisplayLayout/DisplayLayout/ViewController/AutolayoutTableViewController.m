@@ -33,7 +33,7 @@
 
 - (void)registerTableViewCell {
     UINib *cellNib = [UINib nibWithNibName:@"AutolayoutTableViewCell" bundle:[NSBundle mainBundle]];
-    [self.tableView registerNib:cellNib forCellReuseIdentifier:CELL_REUSE_ID];
+    [self.tableView registerNib:cellNib forCellReuseIdentifier:[self getReuseIdentifier]];
 }
 
 

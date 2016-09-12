@@ -41,4 +41,17 @@
     return object;
 }
 
+- (id)getCacheYYImage: (NSString *)key {
+    NSString *yyKey = [key stringByAppendingString:@"YY"];
+    id object = [self.imageCashDic objectForKey:yyKey];
+    if (object == nil) {
+        object = [YYImage imageNamed:key];
+        if (object != nil) {
+            [self.imageCashDic setObject:object forKey:yyKey];
+        }
+    }
+    return object;
+}
+
+
 @end

@@ -27,6 +27,9 @@
 - (IBAction)tapThridButton:(id)sender {
     [self pushVC:@"FrameCountTableViewController"];
 }
+- (IBAction)tapFourthButton:(id)sender {
+    [self pushVC:@"YYKitTableViewController"];
+}
 
 - (void)pushVC:(NSString *) vcName {
    UITableViewController * vc = [[NSClassFromString(vcName) alloc] init];

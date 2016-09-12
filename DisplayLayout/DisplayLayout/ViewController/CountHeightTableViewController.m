@@ -22,14 +22,6 @@
 
 #pragma mark - UITableViewDelegate
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row < self.dataSource.count) {
-        TestDataModel *model = self.dataSource[indexPath.row];
-        return model.cellHeight;
-    }
-    return 100;
-}
-
 #pragma mark - Override Super Method
 - (NSString *)getReuseIdentifier {
     return CELL_REUSE_ID;

@@ -32,9 +32,18 @@
 
 #pragma mark - UITableViewDelegate
 
-//- (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
-//    return NO;
-//}
+- (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+    return NO;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row < self.dataSource.count) {
+        TestDataModel *model = self.dataSource[indexPath.row];
+        return model.cellHeight;
+    }
+    return 100;
+}
+
 
 #pragma mark - Table view data source
 
@@ -70,7 +79,7 @@
 - (void)configTableView {
     self.tableView.delaysContentTouches = NO;
     self.tableView.canCancelContentTouches = YES;
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    //self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     // Remove touch delay (since iOS 8)
     UIView *wrapView = self.tableView.subviews.firstObject;
     
@@ -104,11 +113,13 @@
 /**
  *  子类提供具体的cell重用符, 默认是AutolayoutTableViewCell
  */
+#pragma mark - Override Super Method
 - (NSString *)getReuseIdentifier {
     return @"";
 }
 
 - (void)registerTableViewCell {
+    [self.tableView registerClass:NSClassFromString([self getReuseIdentifier]) forCellReuseIdentifier:[self getReuseIdentifier]];
 }
 
 @end

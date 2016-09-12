@@ -1,25 +1,27 @@
 //
-//  FrameCountTableViewController.m
+//  YYKitTableViewController.m
 //  DisplayLayout
 //
-//  Created by Mr.LuDashi on 16/9/9.
+//  Created by Mr.LuDashi on 16/9/12.
 //  Copyright © 2016年 ZeluLi. All rights reserved.
 //
 
-#import "FrameCountTableViewController.h"
-#import "FrameLayoutTableViewCell.h"
-
-#define CELL_REUSE_ID @"FrameLayoutTableViewCell"
-
-@interface FrameCountTableViewController ()
+#import "YYKitTableViewController.h"
+#define CELL_REUSE_ID @"YYKitTableViewCell"
+@interface YYKitTableViewController ()
 
 @end
 
-@implementation FrameCountTableViewController
+@implementation YYKitTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Override Super Method

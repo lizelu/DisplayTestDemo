@@ -35,6 +35,8 @@
 		F4F734FE1D82C94B00FAD236 /* FrameCountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F734FD1D82C94B00FAD236 /* FrameCountTableViewController.m */; };
 		F4F736021D86540200FAD236 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F4F736011D86540200FAD236 /* libsqlite3.tbd */; };
 		F4F736041D86542700FAD236 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F4F736031D86542700FAD236 /* libz.tbd */; };
+		F4F8E0EC1D86808E00472FA1 /* YYKitTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F8E0EB1D86808E00472FA1 /* YYKitTableViewController.m */; };
+		F4F8E0EF1D8681D900472FA1 /* YYKitTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F8E0EE1D8681D900472FA1 /* YYKitTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +88,10 @@
 		F4F734FD1D82C94B00FAD236 /* FrameCountTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameCountTableViewController.m; sourceTree = "<group>"; };
 		F4F736011D86540200FAD236 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		F4F736031D86542700FAD236 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		F4F8E0EA1D86808E00472FA1 /* YYKitTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYKitTableViewController.h; sourceTree = "<group>"; };
+		F4F8E0EB1D86808E00472FA1 /* YYKitTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYKitTableViewController.m; sourceTree = "<group>"; };
+		F4F8E0ED1D8681D900472FA1 /* YYKitTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYKitTableViewCell.h; sourceTree = "<group>"; };
+		F4F8E0EE1D8681D900472FA1 /* YYKitTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYKitTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +198,8 @@
 				F4F734DD1D82678F00FAD236 /* CountHeightTableViewController.m */,
 				F4F734FC1D82C94B00FAD236 /* FrameCountTableViewController.h */,
 				F4F734FD1D82C94B00FAD236 /* FrameCountTableViewController.m */,
+				F4F8E0EA1D86808E00472FA1 /* YYKitTableViewController.h */,
+				F4F8E0EB1D86808E00472FA1 /* YYKitTableViewController.m */,
 				F4F734E21D82B72000FAD236 /* MainTableViewController.h */,
 				F4F734E31D82B72000FAD236 /* MainTableViewController.m */,
 			);
@@ -280,6 +288,8 @@
 				F4F734F31D82C24200FAD236 /* AutolayoutTableViewCell.xib */,
 				F4F734F41D82C24200FAD236 /* FrameLayoutTableViewCell.h */,
 				F4F734F51D82C24200FAD236 /* FrameLayoutTableViewCell.m */,
+				F4F8E0ED1D8681D900472FA1 /* YYKitTableViewCell.h */,
+				F4F8E0EE1D8681D900472FA1 /* YYKitTableViewCell.m */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -418,12 +428,14 @@
 				F4F7348F1D81600300FAD236 /* FPSDisplay.m in Sources */,
 				F4F734721D810AB300FAD236 /* AppDelegate.m in Sources */,
 				F4F734D91D825D7700FAD236 /* SuperTableViewController.m in Sources */,
+				F4F8E0EC1D86808E00472FA1 /* YYKitTableViewController.m in Sources */,
 				F4F734EF1D82C03A00FAD236 /* UIView+Frame.m in Sources */,
 				F4F734E81D82BAB100FAD236 /* ImageCache.m in Sources */,
 				F4F734D31D816F7800FAD236 /* TestDataModel.m in Sources */,
 				F4F734D61D824D9400FAD236 /* DataSupport.m in Sources */,
 				F4F734FB1D82C25300FAD236 /* SuperTableViewCell.m in Sources */,
 				F4F7346F1D810AB300FAD236 /* main.m in Sources */,
+				F4F8E0EF1D8681D900472FA1 /* YYKitTableViewCell.m in Sources */,
 				F4F734F81D82C24200FAD236 /* FrameLayoutTableViewCell.m in Sources */,
 				F4F734F61D82C24200FAD236 /* AutolayoutTableViewCell.m in Sources */,
 				F4F734E41D82B72000FAD236 /* MainTableViewController.m in Sources */,
@@ -544,7 +556,7 @@
 				INFOPLIST_FILE = DisplayLayout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = ZeluLi.DisplayLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -560,7 +572,7 @@
 				INFOPLIST_FILE = DisplayLayout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = ZeluLi.DisplayLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
