@@ -17,6 +17,7 @@
 #pragma mark - Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self configTableView];
     [self registerTableViewCell];
     [self createDataSupport];
 }
