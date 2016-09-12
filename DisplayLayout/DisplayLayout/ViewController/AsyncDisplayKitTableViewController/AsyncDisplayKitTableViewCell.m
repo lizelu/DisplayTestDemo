@@ -9,10 +9,10 @@
 #import "AsyncDisplayKitTableViewCell.h"
 
 @interface AsyncDisplayKitTableViewCell()
-@property (strong, nonatomic) UIImageView *headerImageView;
-@property (strong, nonatomic) UILabel *titleLable;
-@property (strong, nonatomic) UILabel *timeLabel;
-@property (strong, nonatomic) UITextView *contentTextView;
+@property (strong, nonatomic) ASImageNode *headerImageNode;
+@property (strong, nonatomic) ASTextNode *titleTextNode;
+@property (strong, nonatomic) ASTextNode *timeTextNode;
+@property (strong, nonatomic) ASTextNode *contentTextNode;
 @end
 
 @implementation AsyncDisplayKitTableViewCell
@@ -20,7 +20,7 @@
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        if (self.headerImageView == nil) {
+        if (self.headerImageNode == nil) {
             [self addHeaderImageView];
             [self addTitle];
             [self addTime];
@@ -31,41 +31,53 @@
 }
 
 - (void)addHeaderImageView {
-    self.headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(15, 8, 40, 40)];
-    self.headerImageView.contentMode = UIViewContentModeScaleAspectFit;
-    self.headerImageView.layer.cornerRadius = self.headerImageView.width / 2;
-    self.headerImageView.clipsToBounds = YES;
-    [self addSubview:self.headerImageView];
+    self.headerImageNode = [[ASImageNode alloc] init];
+    self.headerImageNode.frame = CGRectMake(15, 8, 40, 40);
+    self.headerImageNode.contentMode = UIViewContentModeScaleAspectFit;
+    self.headerImageNode.layer.cornerRadius = self.headerImageNode.view.width / 2;
+    self.headerImageNode.clipsToBounds = YES;
+    [self addSubview:self.headerImageNode.view];
+}
+
+- (NSAttributedString *)getAttributeString:(CGFloat) fontSize {
+    NSDictionary *titleNodeAttributes = @{
+                                          NSFontAttributeName : [UIFont boldSystemFontOfSize:15.0],
+                                          NSForegroundColorAttributeName : [UIColor blackColor]
+                                          };
+    return [[NSAttributedString alloc] initWithString:@"" attributes:titleNodeAttributes];
+
 }
 
 - (void)addTitle {
-    self.titleLable = [[UILabel alloc] initWithFrame:CGRectMake(70, 10, 50, 15)];
-    self.titleLable.font = [UIFont systemFontOfSize:15];
-    [self addSubview:self.titleLable];
+    self.titleTextNode = [[ASTextNode alloc] init];
+    self.titleTextNode.frame = CGRectMake(70, 10, 50, 15);
+    self.titleTextNode.attributedText = [self getAttributeString:15];
+    
+    [self addSubview:self.titleTextNode.view];
 }
 
 - (void)addTime {
-    self.timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 30, 150, 15)];
-    self.timeLabel.font = [UIFont systemFontOfSize:14];
-    [self addSubview:self.timeLabel];
+    self.timeTextNode = [[ASTextNode alloc] init];
+    self.timeTextNode.frame = CGRectMake(70, 30, 150, 15);
+    self.timeTextNode.attributedText = [self getAttributeString:14];
+    [self addSubview:self.timeTextNode.view];
 }
 
 - (void)addTextView {
-    self.contentTextView = [[UITextView alloc] initWithFrame:CGRectMake(15, 60, SCREEN_WIDTH - 30, 10)];
-    self.contentTextView.font = [UIFont systemFontOfSize:14];
-    self.contentTextView.editable = NO;
-    self.contentTextView.scrollEnabled = NO;
-    [self addSubview:self.contentTextView];
+    self.contentTextNode = [[ASTextNode alloc] init];
+    self.contentTextNode.frame = CGRectMake(15, 60, SCREEN_WIDTH - 30, 10);
+    self.contentTextNode.attributedText = [self getAttributeString:14];
+    [self addSubview:self.contentTextNode.view];
 }
 
 - (void)configCellData:(TestDataModel *)model {
     //[self.headerImageView setImage:[UIImage imageNamed:model.imageName]];     //直接创建
     
-    [self.headerImageView setImage:[[ImageCache shareInstance] getCacheImage:model.imageName]];
-    [self.titleLable setText:model.title];
-    [self.timeLabel setText:model.time];
-    [self.contentTextView setText:model.content];
-    self.contentTextView.height = model.textHeight;
+    [self.headerImageNode setImage:[[ImageCache shareInstance] getCacheImage:model.imageName]];
+    self.titleTextNode.attributedText = model.attributeTitle;
+    self.timeTextNode.attributedText = model.attributeTime;
+    self.contentTextNode.attributedText = model.attributeContent;
+    self.contentTextNode.view.height = model.textHeight;
 }
 
 

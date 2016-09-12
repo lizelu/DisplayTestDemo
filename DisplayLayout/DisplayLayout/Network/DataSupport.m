@@ -71,6 +71,10 @@
     text.font = [UIFont systemFontOfSize:14];
     text.lineSpacing = 3;
     model.attributeContent = text;
+    
+    model.attributeTitle = [[NSAttributedString alloc] initWithString:model.title];
+    model.attributeTime = [[NSAttributedString alloc] initWithString:model.time];
+    
    
     
 //    NSLog(@"%lf", );
