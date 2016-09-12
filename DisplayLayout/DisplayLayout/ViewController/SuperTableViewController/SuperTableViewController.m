@@ -119,7 +119,14 @@
 }
 
 - (void)registerTableViewCell {
-    [self.tableView registerClass:NSClassFromString([self getReuseIdentifier]) forCellReuseIdentifier:[self getReuseIdentifier]];
+    
+    
+    if ([[self getReuseIdentifier] isEqualToString:@"AutolayoutTableViewCell"]) {
+        UINib *cellNib = [UINib nibWithNibName:[self getReuseIdentifier] bundle:[NSBundle mainBundle]];
+        [self.tableView registerNib:cellNib forCellReuseIdentifier:[self getReuseIdentifier]];
+    } else {
+        [self.tableView registerClass:NSClassFromString([self getReuseIdentifier]) forCellReuseIdentifier:[self getReuseIdentifier]];
+    }
 }
 
 @end

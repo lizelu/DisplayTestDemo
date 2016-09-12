@@ -30,6 +30,9 @@
 - (IBAction)tapFourthButton:(id)sender {
     [self pushVC:@"YYKitTableViewController"];
 }
+- (IBAction)tapFifthButton:(id)sender {
+    [self pushVC:@"AsyncDisplayKitTableViewController"];
+}
 
 - (void)pushVC:(NSString *) vcName {
    UITableViewController * vc = [[NSClassFromString(vcName) alloc] init];

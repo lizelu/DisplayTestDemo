@@ -31,10 +31,4 @@
     return CELL_REUSE_ID;
 }
 
-- (void)registerTableViewCell {
-    UINib *cellNib = [UINib nibWithNibName:@"AutolayoutTableViewCell" bundle:[NSBundle mainBundle]];
-    [self.tableView registerNib:cellNib forCellReuseIdentifier:[self getReuseIdentifier]];
-}
-
-
 @end

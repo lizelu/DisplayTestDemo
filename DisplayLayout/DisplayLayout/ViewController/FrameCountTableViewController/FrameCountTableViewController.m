@@ -27,9 +27,4 @@
     return CELL_REUSE_ID;
 }
 
-- (void)registerTableViewCell {
-    [self.tableView registerClass:NSClassFromString([self getReuseIdentifier]) forCellReuseIdentifier:[self getReuseIdentifier]];
-}
-
-
 @end
