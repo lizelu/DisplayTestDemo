@@ -12,7 +12,7 @@
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 
 @interface FPSDisplay ()
-@property (strong, nonatomic) UILabel *displayLable;
+@property (strong, nonatomic) UILabel *displayLabel;
 @property (strong, nonatomic) CADisplayLink *link;
 @property (assign, nonatomic) NSInteger count;
 @property (assign, nonatomic) NSTimeInterval lastTime;
@@ -42,13 +42,13 @@
 
 - (void)initDisplayLabel {
     CGRect frame = CGRectMake(SCREEN_WIDTH - 100, SCREEN_HEIGHT - 50, 80, 30);
-    self.displayLable = [[UILabel alloc] initWithFrame: frame];
+    self.displayLabel = [[UILabel alloc] initWithFrame: frame];
     
-    self.displayLable.layer.cornerRadius = 5;
-    self.displayLable.clipsToBounds = YES;
-    self.displayLable.textAlignment = NSTextAlignmentCenter;
-    self.displayLable.userInteractionEnabled = NO;
-    self.displayLable.backgroundColor = [UIColor colorWithWhite:0.000 alpha:0.700];
+    self.displayLabel.layer.cornerRadius = 5;
+    self.displayLabel.clipsToBounds = YES;
+    self.displayLabel.textAlignment = NSTextAlignmentCenter;
+    self.displayLabel.userInteractionEnabled = NO;
+    self.displayLabel.backgroundColor = [UIColor colorWithWhite:0.000 alpha:0.700];
     
     _font = [UIFont fontWithName:@"Menlo" size:14];
     if (_font) {
@@ -58,29 +58,39 @@
         _subFont = [UIFont fontWithName:@"Courier" size:4];
     }
     
-    _link = [CADisplayLink displayLinkWithTarget:self selector:@selector(tick:)];
-    [_link addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
+    [self initCADisplayLink];
     
-    [[UIApplication sharedApplication].keyWindow addSubview:self.displayLable];
+    [[UIApplication sharedApplication].keyWindow addSubview:self.displayLabel];
+}
+
+- (void)initCADisplayLink {
+    self.link = [CADisplayLink displayLinkWithTarget:self selector:@selector(tick:)];
+    [self.link addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
 }
 
 - (void)tick:(CADisplayLink *)link {
-    if (_lastTime == 0) {
-        _lastTime = link.timestamp;
+    if (self.lastTime == 0) {           //对LastTime进行初始化
+        self.lastTime = link.timestamp;
         return;
     }
     
-    _count++;
-    NSTimeInterval delta = link.timestamp - _lastTime;
-    if (delta < 1) return;
-    _lastTime = link.timestamp;
-    float fps = _count / delta;
-    _count = 0;
+    self.count += 1;   //记录tick在1秒内执行的次数
+    NSTimeInterval delta = link.timestamp - self.lastTime;  //计算本次刷新和上次更新FPS的时间间隔
     
+    //大于等于1秒时，来计算FPS
+    if (delta >= 1) {
+        self.lastTime = link.timestamp;
+        float fps = self.count / delta;         // 次数 除以 时间 = FPS （次/秒）
+        self.count = 0;
+        [self updateDisplayLabelText: fps];
+    }
+}
+
+- (void)updateDisplayLabelText: (float) fps {
     CGFloat progress = fps / 60.0;
     UIColor *color = [UIColor colorWithHue:0.27 * (progress - 0.2) saturation:1 brightness:0.9 alpha:1];
-    self.displayLable.text = [NSString stringWithFormat:@"%d FPS",(int)round(fps)];
-    self.displayLable.textColor = color;
+    self.displayLabel.text = [NSString stringWithFormat:@"%d FPS",(int)round(fps)];
+    self.displayLabel.textColor = color;
 }
 
 - (void)dealloc {
