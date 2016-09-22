@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"FrameLayoutCountHeight";
     // Do any additional setup after loading the view.
 }
 

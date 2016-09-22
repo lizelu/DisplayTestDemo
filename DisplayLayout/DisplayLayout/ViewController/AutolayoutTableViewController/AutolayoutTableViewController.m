@@ -16,6 +16,7 @@
 #pragma mark - Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"AotomaticDimension";
     self.tableView.estimatedRowHeight = 100.0;  //设置预估值
 }
 

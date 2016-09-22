@@ -15,6 +15,7 @@
 @implementation AsyncDisplayKitTableViewController
 
 - (void)viewDidLoad {
+    self.title = @"AsyncDisplayKit";
     [super viewDidLoad];
     
 }
