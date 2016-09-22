@@ -64,6 +64,7 @@
     
     NSInteger endIndex = arc4random() % contentText.length;
     model.content = [contentText substringToIndex:endIndex];
+    
     model.textHeight = [self countTextHeight:model.content];
     model.cellHeight = model.textHeight + 60;
     
@@ -75,15 +76,10 @@
     model.attributeTitle = [[NSAttributedString alloc] initWithString:model.title];
     model.attributeTime = [[NSAttributedString alloc] initWithString:model.time];
     
-   
-    
-//    NSLog(@"%lf", );
-    
     [self.dataSource addObject:model];
 }
 
 -(CGFloat)countTextHeight:(NSString *) text {
-    
     NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:text];
     NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
     style.lineSpacing = 0;
