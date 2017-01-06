@@ -378,6 +378,7 @@
 				TargetAttributes = {
 					F4F734691D810AB300FAD236 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = N5WRHCE748;
 					};
 				};
 			};
@@ -603,6 +604,7 @@
 			baseConfigurationReference = 7F1334AB2ACF26FB8622224F /* Pods-DisplayLayout.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N5WRHCE748;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DisplayLayout/PrefixHeader.pch";
 				INFOPLIST_FILE = DisplayLayout/Info.plist;
@@ -619,6 +621,7 @@
 			baseConfigurationReference = 99DC208CAE8F6A9C43F7486B /* Pods-DisplayLayout.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N5WRHCE748;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DisplayLayout/PrefixHeader.pch";
 				INFOPLIST_FILE = DisplayLayout/Info.plist;
